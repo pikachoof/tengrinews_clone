@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> Tengrinews Clone </title>
+<script src="https://cdn.tailwindcss.com"></script>
+{% endblock %}
+
+{% block body %}
+<div class="container mx-auto my-5 border-2">
+<div class="container font-sans text-xl p-2">Tengrinews Clone</div>
+<div class="grid grid-cols-3">
+{% for article in articles %}
+    <div class="transition ease-in-out hover:-translate-x-1 hover:-translate-y-1 hover:bg-green-100 duration-100 border-2">
+	    <p>{{article.title}}</p>
+	    <br>
+	    <p>{{article.announce}}</p>
+	    <br>
+	    <div class="container border-2"><a href="{{article.href}}">Link</a></div>
+    </div>
+{% endfor %}
+</div>
+</div>
+<form action="/index" method="post">
+	<input type="number" name="page_number">
+	<button type="submit">Submit</button>
+</form>
+{% endblock %}
