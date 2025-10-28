@@ -5,6 +5,3 @@
 5) Launch the django server: ```python manage.py runserver```
 6) Open the website via the generated link in the console: ```going to be 127.xxx.xxx.xxx```
 7) Enjoy!
-
-(I've done what I could, but it's not full functionality)
-(+ I did so many requests from tengrinews that I got IP banned while testing, unable to do requests)
